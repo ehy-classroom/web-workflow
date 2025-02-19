@@ -22,12 +22,13 @@ LAYOUT
 */
 
 h1,h2,h3,h4,h5,h6,p {
-    margin: 1em;
+    margin-bottom: 1rem;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem 8px;
 }
 
 .flexbox {
@@ -115,10 +116,20 @@ RESPONSIVE
 /* Breakpoint bei 900px */
 @media (min-width: 56em) {
 
+    .card {
+        width: 33.33%;
+    }
+
 }
 
 /* Breakpoint bei 1200px */
 @media (min-width: 75em) {
+
+    /* 
+    .card {
+        width: 25%;
+    } 
+        */
 
 }
 
