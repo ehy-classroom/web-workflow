@@ -1,7 +1,28 @@
 
-
+/*
+LAYOUT
+*/
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+
+
+/*
+COLOR & STYLE
+*/
+
+
+.main-header {
+    background: red;
+}
+
+.main-footer {
+    background: blue;
+}
+
+section {
+    background: yellow;
 }
