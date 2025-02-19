@@ -48,6 +48,16 @@ main {
     min-height: 34vh;
 }
 
+.card {
+    padding: 8px 0;
+}
+
+.col-1 * {
+    max-width: 42em;
+}
+
+}
+
 
 /*
 TYPOGRAPHY
@@ -57,6 +67,7 @@ body {
     font-family: "Work Sans", sans-serif;
     font-weight: 300;
     line-height: 1.5;
+    font-size: 1.2em;
 }
 
 /*
@@ -86,7 +97,7 @@ section {
     background: yellow;
 }
 
-.card {
+.card-container {
     background: green;
 }
 
@@ -110,7 +121,9 @@ RESPONSIVE
 
     .card {
         width: 50%;
-    }
+        padding-right: 8px;
+        padding-left: 8px;
+;    }
 }
 
 /* Breakpoint bei 900px */
