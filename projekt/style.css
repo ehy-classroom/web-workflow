@@ -1,3 +1,7 @@
+/*
+RESET
+*/
+
 
 /*
 LAYOUT
@@ -25,4 +29,9 @@ COLOR & STYLE
 
 section {
     background: yellow;
+}
+
+.card {
+    color: #fff;
+    background: green;
 }
