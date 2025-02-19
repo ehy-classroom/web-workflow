@@ -27,7 +27,9 @@ LAYOUT
     flex-wrap: wrap;
 }
 
-
+.card h3 {
+    width: 100%;
+}
 
 /*
 COLOR & STYLE
@@ -57,17 +59,20 @@ RESPONSIVE
 */
 
 /* Breakpoint bei 580px */
-@media (max-width: 36em) {
+@media (min-width: 36em) {
 
+    .card {
+        width: 50%;
+    }
 }
 
 /* Breakpoint bei 900px */
-@media (max-width: 56em) {
+@media (min-width: 56em) {
 
 }
 
 /* Breakpoint bei 1200px */
-@media (max-width: 75em) {
+@media (min-width: 75em) {
 
 }
 
