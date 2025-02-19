@@ -129,7 +129,7 @@ section {
 }
 
 .card-container {
-    background: green;
+    background: var(--color-grey-cool-500);
 }
 
 /**
