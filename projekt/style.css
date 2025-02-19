@@ -2,7 +2,7 @@
 Stylesheet
 Bowmayster Architekturen
 One Pager
-Version: 1.0.2
+Version: 1.0.3
 */
 
 /*
@@ -19,7 +19,10 @@ img {
     width: 100%;
 }
 
-header, footer, main,section {
+header,
+footer,
+main,
+section {
     overflow: hidden;
 }
 
@@ -28,14 +31,35 @@ header, footer, main,section {
 LAYOUT
 ---------------------*/
 
-h1,h2,h3,h4,h5,h6,p {
+
+/**-----
+Layout Vars/Tokens
+-----**/
+
+:root {
+    /*Base*/
+    --layout-unit-100: 4px;
+}
+
+
+/**-----
+Layout General/Misc
+-----**/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin-bottom: 1rem;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem 8px;
+    padding: 1rem calc(var(--layout-unit-100) * 2);
 }
 
 .flexbox {
@@ -47,6 +71,10 @@ h2 {
     width: 100%;
 }
 
+.main-header {
+    min-height: 21vh;
+}
+
 main {
     min-height: 55vh;
 }
@@ -56,7 +84,7 @@ main {
 }
 
 .card {
-    padding: 8px 0;
+    padding: var(--layout-unit-100) 0;
 }
 
 .col-1 * {
@@ -77,13 +105,36 @@ body {
     /* font-size: 1.2em; */
 }
 
+/**-----
+Font Styles & Weights
+-----**/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+strong {
+    font-weight: 600;
+}
+
+
+/**-----
+Font Sizes
+-----**/
+
+.card p,
+.main-footer {
+    font-size: 0.8em;
+}
+
 /*---------------------
 COLOR & STYLE
 ---------------------*/
 
-/**
+/**-----
 Color Vars/Tokens
-**/
+-----**/
 
 :root {
     /*Base*/
@@ -91,39 +142,44 @@ Color Vars/Tokens
     --color-hue-secondary: 89;
 
     /*Grey Scale*/
-    --color-grey-cool-100: hsl(var(--color-hue-primary),5%,97%);
-    --color-grey-cool-200: hsl(var(--color-hue-primary),8%,89%);
-    --color-grey-cool-300: hsl(var(--color-hue-primary),8%,76%);
-    --color-grey-cool-400: hsl(var(--color-hue-primary),13%,68%);
-    --color-grey-cool-500: hsl(var(--color-hue-primary),13%,42%);
-    --color-grey-cool-600: hsl(var(--color-hue-primary),13%,34%);
-    --color-grey-cool-700: hsl(var(--color-hue-primary),21%,21%);
-    --color-grey-cool-800: hsl(var(--color-hue-primary),42%,13%);
+    --color-grey-cool-100: hsl(var(--color-hue-primary), 5%, 97%); /*sub-white*/
+    --color-grey-cool-200: hsl(var(--color-hue-primary), 8%, 89%);
+    --color-grey-cool-300: hsl(var(--color-hue-primary), 8%, 76%);
+    --color-grey-cool-400: hsl(var(--color-hue-primary), 13%, 68%);
+    --color-grey-cool-500: hsl(var(--color-hue-primary), 13%, 42%);
+    --color-grey-cool-600: hsl(var(--color-hue-primary), 13%, 34%);
+    --color-grey-cool-700: hsl(var(--color-hue-primary), 21%, 21%);
+    --color-grey-cool-800: hsl(var(--color-hue-primary), 42%, 13%); /*sub-black*/
 
     /*Brand Colors*/
 
-    --color-primary-400: hsl(var(--color-hue-primary), 89%, 55%);
+    --color-primary-400: hsl(var(--color-hue-primary), 55%, 42%);
 
     /*Accent Colors*/
-    --color-accent-100: hsl(34,97%,55%);
-    --color-accent-200: hsl(var(--color-hue-secondary),55%,55%);
+    --color-accent-100: hsl(34, 97%, 55%);
+    --color-accent-200: hsl(var(--color-hue-secondary), 55%, 55%);
 }
 
 
 
-/**
+/**-----
 Color Backgrounds
-**/
+-----**/
 
 
 .main-header {
-    background: var(--color-grey-cool-300);
+    background: var(--color-primary-400);
 }
 
 .main-footer {
     background: var(--color-grey-cool-700);
 
 }
+
+main {
+    background: var(--color-grey-cool-100);
+}
+
 section {
     /* background: yellow; */
 }
@@ -132,19 +188,37 @@ section {
     background: var(--color-grey-cool-500);
 }
 
-/**
+/**-----
 Color Text
-**/
+-----**/
 
+main {
+    color: var(--color-grey-cool-800);
+}
 
-.card,
-.main-footer {
-    color: #fff;
+.main-header,
+.main-footer,
+.card {
+    color: var(--color-grey-cool-100);
 }
 
 /*---------------------
 COMPONENTS
 ---------------------*/
+
+/**-----
+Component Card
+-----**/
+
+.card-container {
+    border-radius: var(--layout-unit-100);
+    overflow: hidden;
+}
+
+.card-container > div {
+    padding: calc(var(--layout-unit-100) * 2);
+}
+
 
 
 /*---------------------
@@ -156,9 +230,10 @@ RESPONSIVE
 
     .card {
         width: 50%;
-        padding-right: 8px;
-        padding-left: 8px;
-;    }
+        padding-right: var(--layout-unit-100);
+        padding-left: var(--layout-unit-100);
+        ;
+    }
 }
 
 /* Breakpoint bei 900px */
@@ -180,4 +255,3 @@ RESPONSIVE
         */
 
 }
-
