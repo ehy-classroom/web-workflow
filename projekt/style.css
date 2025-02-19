@@ -2,7 +2,7 @@
 Stylesheet
 Bowmayster Architekturen
 One Pager
-Version: 1.0.4
+Version: 1.0.5
 */
 
 /*
@@ -90,6 +90,10 @@ main {
 .col-1 * {
     max-width: 42em;
 }
+
+
+
+
 
 
 
@@ -238,6 +242,17 @@ RESPONSIVE
         padding-left: var(--layout-unit-100);
         ;
     }
+
+    .main-footer .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .main-footer .container > * {
+        width: 50%;
+    }
+
+
 }
 
 /* Breakpoint bei 900px */
@@ -245,6 +260,10 @@ RESPONSIVE
 
     .card {
         width: 33.33%;
+    }
+
+    .main-footer .container > * {
+        width: 25%;
     }
 
 }
