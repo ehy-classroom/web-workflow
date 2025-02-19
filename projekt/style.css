@@ -12,10 +12,18 @@ img {
     width: 100%;
 }
 
+header, footer, main,section {
+    overflow: hidden;
+}
+
 
 /*
 LAYOUT
 */
+
+h1,h2,h3,h4,h5,h6,p {
+    margin: 1em;
+}
 
 .container {
     max-width: 1200px;
@@ -27,7 +35,7 @@ LAYOUT
     flex-wrap: wrap;
 }
 
-.card h3 {
+h2 {
     width: 100%;
 }
 
@@ -35,6 +43,9 @@ LAYOUT
 COLOR & STYLE
 */
 
+/**
+Color Vars/Tokens
+**/
 
 .main-header {
     background: red;
