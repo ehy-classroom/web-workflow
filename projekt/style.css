@@ -2,7 +2,7 @@
 Stylesheet
 Bowmayster Architekturen
 One Pager
-Version: 1.0.0
+Version: 1.0.2
 */
 
 /*
@@ -74,7 +74,7 @@ body {
     font-family: "Work Sans", sans-serif;
     font-weight: 300;
     line-height: 1.5;
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
 }
 
 /*---------------------
@@ -117,15 +117,15 @@ Color Backgrounds
 
 
 .main-header {
-    background: red;
+    background: var(--color-grey-cool-300);
 }
 
 .main-footer {
-    background: blue;
+    background: var(--color-grey-cool-700);
 
 }
 section {
-    background: yellow;
+    /* background: yellow; */
 }
 
 .card-container {
@@ -133,7 +133,7 @@ section {
 }
 
 /**
-Color Type
+Color Text
 **/
 
 
