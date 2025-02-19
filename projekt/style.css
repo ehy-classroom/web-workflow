@@ -2,12 +2,17 @@
 Stylesheet
 Bowmayster Architekturen
 One Pager
-Version: 1.0.5
+Version: 1.0.6
 */
 
 /*
 RESET
 */
+
+html {
+    /*Simulation Schriftgröße in Browsereinstellungen ändern*/
+    /* font-size: 20px; */
+}
 
 * {
     margin: 0;
@@ -24,6 +29,15 @@ footer,
 main,
 section {
     overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p a {
+    text-decoration: underline;
 }
 
 
@@ -65,15 +79,14 @@ p {
 .flexbox {
     display: flex;
     flex-wrap: wrap;
+    gap: calc(var(--layout-unit-100) * 2)
 }
 
 h2 {
     width: 100%;
 }
 
-.main-header {
-    min-height: 21vh;
-}
+
 
 main {
     min-height: 55vh;
@@ -83,14 +96,34 @@ main {
     min-height: 34vh;
 }
 
-.card {
-    padding: var(--layout-unit-100) 0;
-}
+
 
 .col-1 * {
     max-width: 42em;
 }
 
+
+
+
+.btn {
+    display: inline-block;
+}
+
+/**-----
+Layout Main Header
+-----**/
+
+
+.main-header .container {
+    height: 34vw;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: calc(var(--layout-unit-100) * 3) ;
+}
+
+h1 {
+    line-height: 1;
+}
 
 
 
@@ -118,14 +151,32 @@ h2,
 h3,
 h4,
 h5,
-strong {
+strong,
+.btn {
     font-weight: 600;
+}
+
+.intro p {
+    font-weight: 400;
 }
 
 
 /**-----
 Font Sizes
 -----**/
+
+h1 {
+    font-size: 2.1em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3,
+.intro p {
+    font-size: 1.2em;
+}
 
 .card p,
 .main-footer {
@@ -146,14 +197,16 @@ Color Vars/Tokens
     --color-hue-secondary: 89;
 
     /*Grey Scale*/
-    --color-grey-cool-100: hsl(var(--color-hue-primary), 5%, 97%); /*sub-white*/
+    --color-grey-cool-100: hsl(var(--color-hue-primary), 5%, 97%);
+    /*sub-white*/
     --color-grey-cool-200: hsl(var(--color-hue-primary), 8%, 89%);
     --color-grey-cool-300: hsl(var(--color-hue-primary), 8%, 76%);
     --color-grey-cool-400: hsl(var(--color-hue-primary), 13%, 68%);
     --color-grey-cool-500: hsl(var(--color-hue-primary), 13%, 42%);
     --color-grey-cool-600: hsl(var(--color-hue-primary), 13%, 34%);
     --color-grey-cool-700: hsl(var(--color-hue-primary), 21%, 21%);
-    --color-grey-cool-800: hsl(var(--color-hue-primary), 42%, 13%); /*sub-black*/
+    --color-grey-cool-800: hsl(var(--color-hue-primary), 42%, 13%);
+    /*sub-black*/
 
     /*Brand Colors*/
 
@@ -163,6 +216,7 @@ Color Vars/Tokens
     /*Accent Colors*/
     --color-accent-100: hsl(34, 97%, 55%);
     --color-accent-200: hsl(var(--color-hue-secondary), 55%, 55%);
+    --color-accent-220: hsl(var(--color-hue-secondary), 76%, 34%);
 }
 
 
@@ -185,10 +239,26 @@ main {
     background: var(--color-grey-cool-100);
 }
 
+.btn {
+    background: var(--color-accent-200);
+}
+
+.btn:hover {
+    background: var(--color-accent-220);
+}
+
 section {
     /* background: yellow; */
 }
 
+
+/**-----
+Style Backgrounds
+-----**/
+
+.main-header {
+    background: url(assets/img/colors-2004497_1920.jpeg) no-repeat center center/cover;
+}
 
 
 /**-----
@@ -205,6 +275,22 @@ main {
     color: var(--color-grey-cool-100);
 }
 
+a.btn {
+    color: var(--color-primary-600);
+}
+
+a.btn:hover {
+    color: var(--color-grey-cool-100);
+}
+
+/**-----
+Style Text
+-----**/
+
+h1 {
+    text-shadow: 0 0 12px var(--color-primary-600);
+  }
+
 /*---------------------
 COMPONENTS
 ---------------------*/
@@ -213,19 +299,52 @@ COMPONENTS
 Component Card
 -----**/
 
-.card-container {
-    border-radius: var(--layout-unit-100);
+
+.card {
+    border-radius: calc(var(--layout-unit-100) * 6);
     overflow: hidden;
 }
 
-.card-container > div {
+.card>div {
     padding: calc(var(--layout-unit-100) * 2);
+    text-align: right;
+}
+
+.card>div h3,
+.card>div p {
+    text-align: left;
+}
+
+.card>div p {
+    min-height: 11em;
 }
 
 
-.card-container {
+.card {
     background: var(--color-primary-600);
 }
+
+
+
+
+/**-----
+Component Btn
+-----**/
+
+.btn-100 {
+    padding: 0.3em 1em;
+    border-radius: calc(var(--layout-unit-100) * 4);
+    border: none;
+}
+
+
+.gallery {
+    display: grid;
+    gap: calc(var(--layout-unit-100) * 2);
+  }
+
+
+
 
 
 
@@ -237,10 +356,7 @@ RESPONSIVE
 @media (min-width: 36em) {
 
     .card {
-        width: 50%;
-        padding-right: var(--layout-unit-100);
-        padding-left: var(--layout-unit-100);
-        ;
+        flex: 0 0 50%;
     }
 
     .main-footer .container {
@@ -248,9 +364,37 @@ RESPONSIVE
         flex-wrap: wrap;
     }
 
-    .main-footer .container > * {
+    .main-footer .container>* {
         width: 50%;
     }
+
+    h1 {
+        font-size: 2.9em;
+    }
+    
+    h2 {
+        font-size: 2.1em;
+    }
+    
+    h3 {
+        font-size: 1.2em;
+    }
+
+
+    .col-2,
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: calc(var(--layout-unit-100) * 2);
+    }
+
+    .intro p {
+        grid-column: 2;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr 1fr ; /* 2 Spalten */
+      }
 
 
 }
@@ -258,11 +402,15 @@ RESPONSIVE
 /* Breakpoint bei 900px */
 @media (min-width: 56em) {
 
-    .card {
-        width: 33.33%;
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr ; /* 3 Spalten */
+      }
+
+    .main-header .container {
+        height: 21vw;
     }
 
-    .main-footer .container > * {
+    .main-footer .container>* {
         width: 25%;
     }
 
