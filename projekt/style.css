@@ -2,6 +2,16 @@
 RESET
 */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
 
 /*
 LAYOUT
@@ -10,6 +20,11 @@ LAYOUT
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -35,3 +50,24 @@ section {
     color: #fff;
     background: green;
 }
+
+
+/*
+RESPONSIVE
+*/
+
+/* Breakpoint bei 580px */
+@media (max-width: 36em) {
+
+}
+
+/* Breakpoint bei 900px */
+@media (max-width: 56em) {
+
+}
+
+/* Breakpoint bei 1200px */
+@media (max-width: 75em) {
+
+}
+
