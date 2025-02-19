@@ -39,6 +39,25 @@ h2 {
     width: 100%;
 }
 
+main {
+    min-height: 55vh;
+}
+
+.main-footer {
+    min-height: 34vh;
+}
+
+
+/*
+TYPOGRAPHY
+*/
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
 /*
 COLOR & STYLE
 */
@@ -46,6 +65,13 @@ COLOR & STYLE
 /**
 Color Vars/Tokens
 **/
+
+
+
+/**
+Color Backgrounds
+**/
+
 
 .main-header {
     background: red;
@@ -60,8 +86,17 @@ section {
 }
 
 .card {
-    color: #fff;
     background: green;
+}
+
+/**
+Color Type
+**/
+
+
+.card,
+.main-footer {
+    color: #fff;
 }
 
 
