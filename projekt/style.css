@@ -1,4 +1,11 @@
 /*
+Stylesheet
+Bowmayster Architekturen
+One Pager
+Version: 1.0.0
+*/
+
+/*
 RESET
 */
 
@@ -17,9 +24,9 @@ header, footer, main,section {
 }
 
 
-/*
+/*---------------------
 LAYOUT
-*/
+---------------------*/
 
 h1,h2,h3,h4,h5,h6,p {
     margin-bottom: 1rem;
@@ -56,12 +63,12 @@ main {
     max-width: 42em;
 }
 
-}
 
 
-/*
+
+/*---------------------
 TYPOGRAPHY
-*/
+---------------------*/
 
 body {
     font-family: "Work Sans", sans-serif;
@@ -70,13 +77,37 @@ body {
     font-size: 1.2em;
 }
 
-/*
+/*---------------------
 COLOR & STYLE
-*/
+---------------------*/
 
 /**
 Color Vars/Tokens
 **/
+
+:root {
+    /*Base*/
+    --color-hue-primary: 199;
+    --color-hue-secondary: 89;
+
+    /*Grey Scale*/
+    --color-grey-cool-100: hsl(var(--color-hue-primary),5%,97%);
+    --color-grey-cool-200: hsl(var(--color-hue-primary),8%,89%);
+    --color-grey-cool-300: hsl(var(--color-hue-primary),8%,76%);
+    --color-grey-cool-400: hsl(var(--color-hue-primary),13%,68%);
+    --color-grey-cool-500: hsl(var(--color-hue-primary),13%,42%);
+    --color-grey-cool-600: hsl(var(--color-hue-primary),13%,34%);
+    --color-grey-cool-700: hsl(var(--color-hue-primary),21%,21%);
+    --color-grey-cool-800: hsl(var(--color-hue-primary),42%,13%);
+
+    /*Brand Colors*/
+
+    --color-primary-400: hsl(var(--color-hue-primary), 89%, 55%);
+
+    /*Accent Colors*/
+    --color-accent-100: hsl(34,97%,55%);
+    --color-accent-200: hsl(var(--color-hue-secondary),55%,55%);
+}
 
 
 
@@ -91,8 +122,8 @@ Color Backgrounds
 
 .main-footer {
     background: blue;
-}
 
+}
 section {
     background: yellow;
 }
@@ -111,10 +142,14 @@ Color Type
     color: #fff;
 }
 
+/*---------------------
+COMPONENTS
+---------------------*/
 
-/*
+
+/*---------------------
 RESPONSIVE
-*/
+---------------------*/
 
 /* Breakpoint bei 580px */
 @media (min-width: 36em) {
