@@ -154,6 +154,7 @@ Color Vars/Tokens
     /*Brand Colors*/
 
     --color-primary-400: hsl(var(--color-hue-primary), 55%, 42%);
+    --color-primary-600: hsl(var(--color-hue-primary), 55%, 21%);
 
     /*Accent Colors*/
     --color-accent-100: hsl(34, 97%, 55%);
@@ -184,9 +185,7 @@ section {
     /* background: yellow; */
 }
 
-.card-container {
-    background: var(--color-grey-cool-500);
-}
+
 
 /**-----
 Color Text
@@ -217,6 +216,11 @@ Component Card
 
 .card-container > div {
     padding: calc(var(--layout-unit-100) * 2);
+}
+
+
+.card-container {
+    background: var(--color-primary-600);
 }
 
 
