@@ -209,7 +209,7 @@ Color Vars/Tokens
     /*sub-black*/
 
     /*Brand Colors*/
-
+    --color-primary-200: hsl(var(--color-hue-primary), 55%, 68%);
     --color-primary-400: hsl(var(--color-hue-primary), 55%, 42%);
     --color-primary-600: hsl(var(--color-hue-primary), 55%, 21%);
 
@@ -236,7 +236,7 @@ Color Backgrounds
 }
 
 main {
-    background: var(--color-grey-cool-100);
+    background: var(--color-primary-400);
 }
 
 .btn {
@@ -257,7 +257,7 @@ Style Backgrounds
 -----**/
 
 .main-header {
-    background: url(assets/img/colors-2004497_1920.jpeg) no-repeat center center/cover;
+    background: url(assets/img/architecture-3417022_1920.jpeg) no-repeat center center/cover;
 }
 
 
@@ -266,7 +266,7 @@ Color Text
 -----**/
 
 main {
-    color: var(--color-grey-cool-800);
+    color: var(--color-grey-cool-100);
 }
 
 .main-header,
@@ -334,9 +334,12 @@ Component Btn
 .btn-100 {
     padding: 0.3em 1em;
     border-radius: calc(var(--layout-unit-100) * 4);
-    border: none;
 }
 
+
+/**-----
+Component Gallery
+-----**/
 
 .gallery {
     display: grid;
